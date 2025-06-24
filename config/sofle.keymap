@@ -40,6 +40,15 @@
         };
     };
 
+    macros {
+        qq: qq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Q &kp Q>;
+            label = "QQ";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -130,11 +139,11 @@
         gaming {
             display-name = "default";
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3          &kp N4     &kp N5                                      &kp N6     &kp N7                &kp N8     &kp N9   &kp N0         &kp SEMICOLON
-&kp TAB    &kp Q   &kp Q   &kp W           &kp E      &kp R                                       &kp Y      &kp U                 &kp I      &kp O    &kp P          &kp BACKSLASH
-&kp LCTRL  &kp K   &kp A   &kp S           &kp D      &kp F                                       &kp COLON  &kp H                 &kp J      &kp K    &kp L          &kp ENTER
-&kp LSHFT  &kp Z   &kp X   &kp C           &kp V      &kp B        &kp MINUS        &kp CAPSLOCK  &kp N      &kp M                 &kp COMMA  &kp DOT  &kp BACKSLASH  &none
-                   &none   &kp LEFT_SHIFT  &kp LCTRL  &lt 1 SPACE  &kp BACKSPACE    &lt 2 ENTER   &kp LCTRL  &mt LEFT_SHIFT SLASH  &to 0      &tog 0
+&kp GRAVE  &kp N1        &kp N2      &kp N3  &kp N4          &kp N5                                    &kp N6     &kp N7                &kp N8     &kp N9   &kp N0         &kp SEMICOLON
+&kp TAB    &kp NUMBER_3  &qq         &kp W   &kp E           &kp R                                     &kp Y      &kp U                 &kp I      &kp O    &kp P          &kp BACKSLASH
+&kp LCTRL  &kp K         &kp A       &kp S   &kp D           &kp F                                     &kp COLON  &kp H                 &kp J      &kp K    &kp L          &kp ENTER
+&kp LSHFT  &kp Z         &kp X       &kp C   &kp NUMBER_1    &kp B      &kp G            &kp CAPSLOCK  &kp N      &kp M                 &kp COMMA  &kp DOT  &kp BACKSLASH  &none
+                         &kp ESCAPE  &kp Z   &kp LEFT_SHIFT  &kp LCTRL  &kp BACKSPACE    &lt 2 ENTER   &kp LCTRL  &mt LEFT_SHIFT SLASH  &to 0      &tog 0
             >;
 
             sensor-bindings =
