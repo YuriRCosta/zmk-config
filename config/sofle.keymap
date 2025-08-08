@@ -147,11 +147,11 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &trans   &trans             &trans     &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &trans   &trans             &trans     &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp GRAVE  &kp SQT  &kp DOUBLE_QUOTES  &kp MINUS  &kp PLUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans   &trans             &trans     &trans    &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans   &trans             &trans
+&trans  &trans  &trans  &trans    &trans  &trans                    &trans     &trans   &trans             &trans     &trans    &trans
+&trans  &trans  &trans  &e_agudo  &trans  &trans                    &trans     &trans   &trans             &trans     &trans    &trans
+&trans  &trans  &trans  &trans    &trans  &trans                    &kp GRAVE  &kp SQT  &kp DOUBLE_QUOTES  &kp MINUS  &kp PLUS  &trans
+&trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans  &trans     &trans   &trans             &trans     &trans    &trans
+                &trans  &trans    &trans  &trans  &trans    &trans  &trans     &trans   &trans             &trans
             >;
         };
 
