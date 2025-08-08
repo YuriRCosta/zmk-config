@@ -185,7 +185,7 @@
 &trans  &trans    &trans  &trans    &trans  &trans                    &trans     &trans   &trans             &trans     &trans    &trans
 &trans  &trans    &trans  &e_agudo  &trans  &trans                    &trans     &trans   &trans             &o_agudo   &trans    &trans
 &trans  &a_agudo  &trans  &trans    &trans  &trans                    &kp GRAVE  &kp SQT  &kp DOUBLE_QUOTES  &kp MINUS  &kp PLUS  &trans
-&trans  &trans    &trans  &trans    &trans  &trans  &trans    &trans  &trans     &trans   &trans             &trans     &trans    &trans
+&trans  &trans    &trans  &cedilha  &trans  &trans  &trans    &trans  &trans     &trans   &trans             &trans     &trans    &trans
                   &trans  &trans    &trans  &trans  &trans    &trans  &trans     &trans   &trans             &trans
             >;
         };
