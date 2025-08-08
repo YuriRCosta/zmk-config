@@ -40,6 +40,11 @@
             bindings = <&kp MINUS>;
             key-positions = <28 29>;
         };
+
+        alt_space_macro {
+            bindings = <&alt_space>;
+            key-positions = <52 53>;
+        };
     };
 
     macros {
@@ -90,6 +95,13 @@
             #binding-cells = <0>;
             bindings = <&kp LG(O) &kp TILDE>;
             label = "O_TIO";
+        };
+
+        alt_space: alt_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(SPACE)>;
+            label = "ALT_SPACE";
         };
     };
 
