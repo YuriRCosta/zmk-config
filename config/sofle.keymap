@@ -74,7 +74,7 @@
         cedilha: cedilha {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(C) &kp SQT>;
+            bindings = <&kp LG(C) &kp COMMA>;
             label = "CEDILHA";
         };
 
