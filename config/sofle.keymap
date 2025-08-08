@@ -56,6 +56,41 @@
             bindings = <&kp LG(E) &kp SQT>;
             label = "E_AGUDO";
         };
+
+        a_agudo: a_agudo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(A) &kp SQT>;
+            label = "A_AGUDO";
+        };
+
+        o_agudo: o_agudo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(O) &kp SQT>;
+            label = "O_AGUDO";
+        };
+
+        cedilha: cedilha {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(C) &kp SQT>;
+            label = "CEDILHA";
+        };
+
+        a_tio: a_tio {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(A) &kp TILDE>;
+            label = "A_TIO";
+        };
+
+        o_tio: o_tio {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(O) &kp TILDE>;
+            label = "O_TIO";
+        };
     };
 
     keymap {
@@ -147,19 +182,19 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans    &trans  &trans                    &trans     &trans   &trans             &trans     &trans    &trans
-&trans  &trans  &trans  &e_agudo  &trans  &trans                    &trans     &trans   &trans             &trans     &trans    &trans
-&trans  &trans  &trans  &trans    &trans  &trans                    &kp GRAVE  &kp SQT  &kp DOUBLE_QUOTES  &kp MINUS  &kp PLUS  &trans
-&trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans  &trans     &trans   &trans             &trans     &trans    &trans
-                &trans  &trans    &trans  &trans  &trans    &trans  &trans     &trans   &trans             &trans
+&trans  &trans    &trans  &trans    &trans  &trans                    &trans     &trans   &trans             &trans     &trans    &trans
+&trans  &trans    &trans  &e_agudo  &trans  &trans                    &trans     &trans   &trans             &o_agudo   &trans    &trans
+&trans  &a_agudo  &trans  &trans    &trans  &trans                    &kp GRAVE  &kp SQT  &kp DOUBLE_QUOTES  &kp MINUS  &kp PLUS  &trans
+&trans  &trans    &trans  &trans    &trans  &trans  &trans    &trans  &trans     &trans   &trans             &trans     &trans    &trans
+                  &trans  &trans    &trans  &trans  &trans    &trans  &trans     &trans   &trans             &trans
             >;
         };
 
         layer_6 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans     &trans            &trans             &trans                &trans                 &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &trans            &trans             &trans                &trans                 &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &trans            &trans             &o_tio                &trans                 &trans
+&trans  &a_tio  &trans  &trans  &trans  &trans                    &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                &trans                 &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans            &trans             &trans
             >;
