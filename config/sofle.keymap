@@ -40,11 +40,6 @@
             bindings = <&kp MINUS>;
             key-positions = <28 29>;
         };
-
-        alt_space_macro {
-            bindings = <&alt_space>;
-            key-positions = <52 53>;
-        };
     };
 
     macros {
