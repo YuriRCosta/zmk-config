@@ -53,42 +53,42 @@
         e_agudo: e_agudo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(E) &kp SQT>;
+            bindings = <&kp CAPSLOCK &kp E &kp SQT>;
             label = "E_AGUDO";
         };
 
         a_agudo: a_agudo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(A) &kp SQT>;
+            bindings = <&kp CAPSLOCK &kp A &kp SQT>;
             label = "A_AGUDO";
         };
 
         o_agudo: o_agudo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(O) &kp SQT>;
+            bindings = <&kp CAPSLOCK &kp O &kp SQT>;
             label = "O_AGUDO";
         };
 
         cedilha: cedilha {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(C) &kp COMMA>;
+            bindings = <&kp CAPSLOCK &kp C &kp COMMA>;
             label = "CEDILHA";
         };
 
         a_tio: a_tio {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(A) &kp TILDE>;
+            bindings = <&kp CAPS &kp A &kp TILDE>;
             label = "A_TIO";
         };
 
         o_tio: o_tio {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(O) &kp TILDE>;
+            bindings = <&kp CAPS &kp O &kp TILDE>;
             label = "O_TIO";
         };
 
