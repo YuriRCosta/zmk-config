@@ -42,7 +42,7 @@
         };
 
         mv_wk_layer {
-            bindings = <&mo 7>;
+            bindings = <&lt 7 LA(SPACE)>;
             key-positions = <52 53>;
         };
     };
@@ -116,13 +116,6 @@
             #binding-cells = <0>;
             bindings = <&kp CAPSLOCK &kp I &kp SQT>;
             label = "I_AGUDO";
-        };
-
-        mv_wk_1: mv_wk_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(NUMBER_1)>;
-            label = "MV_WK_1";
         };
     };
 
