@@ -40,6 +40,11 @@
             bindings = <&kp MINUS>;
             key-positions = <28 29>;
         };
+
+        mv_wk_layer {
+            bindings = <&mo 7>;
+            key-positions = <52 53>;
+        };
     };
 
     macros {
@@ -111,6 +116,13 @@
             #binding-cells = <0>;
             bindings = <&kp CAPSLOCK &kp I &kp SQT>;
             label = "I_AGUDO";
+        };
+
+        mv_wk_1: mv_wk_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(NUMBER_1)>;
+            label = "MV_WK_1";
         };
     };
 
@@ -234,6 +246,16 @@
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
                 <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+        };
+
+        workspace_move {
+            bindings = <
+&trans  &trans            &trans            &trans            &trans            &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LA(NUMBER_6)  &kp LA(N7)        &kp LA(N8)        &kp LA(N9)        &kp LA(N0)                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(N5)                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans            &trans            &trans            &trans      &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans            &trans            &trans            &trans      &trans    &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
