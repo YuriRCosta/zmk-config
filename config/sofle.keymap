@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -146,7 +145,7 @@
                 <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
-        lower_layer {
+        num_sym {
             display-name = "lower";
 
             // TODO: Some binds are waiting for shifted keycode support.
@@ -158,17 +157,17 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp DEL          &kp F1           &kp F2            &kp F3        &kp F4           &kp F5                         &kp F6  &kp F7             &kp F8        &kp F9        &kp F10  &kp F11
-&kp PRINTSCREEN  &kp CARET        &kp AMPERSAND     &kp ASTERISK  &kp BACKSLASH    &none                          &none   &kp N7             &kp N8        &kp N9        &none    &kp F12
-&trans           &kp EXCLAMATION  &kp AT_SIGN       &kp HASH      &kp DOLLAR       &kp PERCENT                    &none   &kp NUMBER_4       &kp N5        &kp NUMBER_6  &none    &kp PIPE
-&trans           &none            &kp K_PLAY_PAUSE  &kp C_VOL_DN  &kp C_VOLUME_UP  &none        &trans    &trans  &none   &kp NUMBER_1       &kp NUMBER_2  &kp NUMBER_3  &trans   &trans
-                                  &trans            &trans        &trans           &trans       &trans    &trans  &trans  &mt LEFT_SHIFT N0  &trans        &trans
+&kp DEL          &kp F1           &kp F2            &kp F3        &kp F4           &kp F5                         &kp F6              &kp F7             &kp F8        &kp F9        &kp F10    &kp F11
+&kp PRINTSCREEN  &kp CARET        &kp AMPERSAND     &kp ASTERISK  &kp BACKSLASH    &none                          &kp ASTERISK        &kp N7             &kp N8        &kp N9        &kp SLASH  &kp F12
+&trans           &kp EXCLAMATION  &kp AT_SIGN       &kp HASH      &kp DOLLAR       &kp PERCENT                    &kp PLUS            &kp NUMBER_4       &kp N5        &kp NUMBER_6  &kp MINUS  &kp PIPE
+&trans           &none            &kp K_PLAY_PAUSE  &kp C_VOL_DN  &kp C_VOLUME_UP  &none        &trans    &trans  &none               &kp NUMBER_1       &kp NUMBER_2  &kp NUMBER_3  &trans     &trans
+                                  &trans            &trans        &trans           &trans       &trans    &trans  &mt LCTRL KP_EQUAL  &mt LEFT_SHIFT N0  &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        raise_layer {
+        arrow_keys {
             display-name = "raise";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -179,17 +178,17 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp CAPSLOCK  &none  &none   &none      &none           &none                     &trans    &trans    &trans      &trans        &trans     &none
-&trans        &none  &none   &none      &trans          &trans                    &none     &trans    &bl BL_DEC  &bl BL_INC    &none      &trans
-&trans        &none  &none   &kp LCTRL  &none           &none                     &kp HOME  &kp LEFT  &kp DOWN    &kp UP_ARROW  &kp RIGHT  &kp END
-&trans        &none  &none   &none      &none           &trans  &trans    &trans  &none     &none     &none       &none         &none      &none
-                     &trans  &trans     &kp LEFT_SHIFT  &trans  &trans    &trans  &trans    &trans    &trans      &trans
+&none   &none  &none   &none      &none           &none                     &trans    &trans    &trans         &trans         &trans     &none
+&trans  &none  &none   &none      &trans          &trans                    &none     &trans    &kp C_BRI_DEC  &kp C_BRI_INC  &none      &trans
+&trans  &none  &none   &kp LCTRL  &none           &none                     &kp HOME  &kp LEFT  &kp DOWN       &kp UP_ARROW   &kp RIGHT  &kp END
+&trans  &none  &none   &none      &none           &trans  &trans    &trans  &none     &none     &none          &none          &none      &none
+               &trans  &trans     &kp LEFT_SHIFT  &trans  &trans    &trans  &trans    &trans    &trans         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        adjust_layer {
+        mouse {
             // ----------------------------------------------------------------------------------------------------------------------------
             // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
             // | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
@@ -199,20 +198,20 @@
 
             display-name = "adjust";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &bt BT_SEL 4                  &none  &none     &none           &none            &none     &none
-&none       &none         &none           &mmv MOVE_UP    &none            &none                         &none  &none     &msc SCRL_LEFT  &msc SCRL_RIGHT  &none     &none
-&none       &kp LCTRL     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none                         &none  &mkp MB1  &msc SCRL_DOWN  &msc SCRL_UP     &mkp MB2  &none
-&none       &none         &none           &none           &none            &none         &none    &none  &none  &none     &none           &none            &none     &none
-                          &none           &none           &none            &none         &none    &none  &none  &none     &none           &none
+&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &bt BT_SEL 4                  &none     &none     &none           &none            &none     &none
+&none       &kp LEFT_SHIFT  &none           &mmv MOVE_UP    &none            &none                         &none     &none     &msc SCRL_LEFT  &msc SCRL_RIGHT  &none     &none
+&none       &kp LCTRL       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none                         &mkp MB3  &mkp MB1  &msc SCRL_DOWN  &msc SCRL_UP     &mkp MB2  &none
+&none       &kp LEFT_ALT    &none           &none           &none            &none         &none    &none  &none     &none     &none           &none            &none     &none
+                            &none           &none           &none            &none         &none    &none  &none     &none     &none           &none
             >;
         };
 
         layer_5 {
             bindings = <
-&trans  &trans    &trans  &trans    &trans  &trans                    &trans  &trans   &trans             &trans     &trans    &trans
-&trans  &trans    &trans  &e_agudo  &trans  &trans                    &trans  &trans   &i_agudo           &o_agudo   &trans    &trans
-&trans  &a_agudo  &trans  &trans    &trans  &trans                    &trans  &kp SQT  &kp DOUBLE_QUOTES  &kp GRAVE  &kp PLUS  &trans
-&trans  &trans    &trans  &cedilha  &trans  &trans  &trans    &trans  &trans  &trans   &trans             &trans     &trans    &trans
+&trans  &trans    &trans  &trans    &trans  &trans                    &trans  &trans   &trans             &trans     &trans  &trans
+&trans  &trans    &trans  &e_agudo  &trans  &trans                    &trans  &trans   &i_agudo           &o_agudo   &trans  &trans
+&trans  &a_agudo  &trans  &trans    &trans  &trans                    &trans  &kp SQT  &kp DOUBLE_QUOTES  &kp GRAVE  &trans  &trans
+&trans  &trans    &trans  &cedilha  &trans  &trans  &trans    &trans  &trans  &trans   &trans             &trans     &trans  &trans
                   &trans  &trans    &trans  &trans  &trans    &trans  &trans  &trans   &trans             &trans
             >;
         };
