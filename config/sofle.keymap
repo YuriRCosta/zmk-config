@@ -121,28 +121,28 @@
         wk1: wk1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp NUMBER_1>;
+            bindings = <&kp LEFT_ALT &kp LA(NUMBER_1)>;
             label = "WK1";
         };
 
         wk2: wk2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp NUMBER_2>;
+            bindings = <&kp LEFT_ALT &kp LA(NUMBER_2)>;
             label = "WK2";
         };
 
         wk3: wk3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp NUMBER_3>;
+            bindings = <&kp LEFT_ALT &kp LA(NUMBER_3)>;
             label = "WK3";
         };
 
         wk4: wk4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LALT &kp NUMBER_4>;
+            bindings = <&kp LALT &kp LA(NUMBER_4)>;
             label = "WK4";
         };
     };
