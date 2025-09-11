@@ -40,11 +40,6 @@
             bindings = <&kp MINUS>;
             key-positions = <28 29>;
         };
-
-        mv_wk_layer {
-            bindings = <&lt 7 LA(SPACE)>;
-            key-positions = <52 53>;
-        };
     };
 
     macros {
