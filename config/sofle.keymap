@@ -23,11 +23,6 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-
-        mouse2 {
             if-layers = <2 7>;
             then-layer = <3>;
         };
