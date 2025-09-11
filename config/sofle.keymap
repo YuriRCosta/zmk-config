@@ -117,6 +117,34 @@
             bindings = <&kp CAPSLOCK &kp I &kp SQT>;
             label = "I_AGUDO";
         };
+
+        wk1: wk1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp NUMBER_1>;
+            label = "WK1";
+        };
+
+        wk2: wk2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp NUMBER_2>;
+            label = "WK2";
+        };
+
+        wk3: wk3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp NUMBER_3>;
+            label = "WK3";
+        };
+
+        wk4: wk4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp NUMBER_4>;
+            label = "WK4";
+        };
     };
 
     keymap {
@@ -243,11 +271,11 @@
 
         workspace_move {
             bindings = <
-&trans  &trans            &trans            &trans            &trans            &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LA(NUMBER_6)  &kp LA(N7)        &kp LA(N8)        &kp LA(N9)        &kp LA(N0)                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(N5)                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans            &trans            &trans            &trans            &trans      &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans            &trans            &trans            &trans      &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans      &trans      &trans      &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LA(NUMBER_6)  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(N0)                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &wk1              &wk2        &wk3        &wk4        &kp LA(N5)                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans      &trans      &trans      &trans      &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans      &trans      &trans      &trans      &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
